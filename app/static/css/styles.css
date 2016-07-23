@@ -1,0 +1,51 @@
+* {
+  font-family: sans-serif;
+}
+fieldset {
+	display: inline-block;
+	vertical-align: top;
+
+}
+form {
+	text-align: right;
+	display: inline-block;
+}
+ul, span {
+	font-size: 0.8em;
+	color: red;
+	display: inline-block;
+}
+h3 {
+	display: inline-block;
+}
+#addcomment {
+	display: inline-block;
+}
+.allquotes {
+	width: 250px;
+	height: 400px;
+	padding-right: 0px;
+}
+.scrollable {
+	display: inline-block;
+	overflow: auto;
+	height: 390px;
+
+
+}
+h6 {
+	display: inline-block;
+	margin: 0px;
+}
+.submitted_quotes {
+	height: 30px;
+	/*border: solid black 1px;*/
+}
+.addquote {
+	border: solid black 1px;
+	display: inline-block;
+	vertical-align: top;
+}
+p {
+	margin-bottom: 0px;
+}
