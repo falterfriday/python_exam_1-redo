@@ -11,12 +11,15 @@ class Quotes(Controller):
 		self.load_model('User')
 		self.db = self._app.db
 
+
+
+
 	def quotes(self):
-			user_id = session['id']
-			quotes = self.models['Quote'].get_all_quotes()
-			favorites = self.models['Quote'].get_all_favorites(user_id)
-			alias = session['alias']
-			return self.load_view('quotes.html', alias=alias, quotes=quotes, favorites=favorites)
+		user_id = session['id']
+		quotes = self.models['Quote'].get_all_quotes()
+		favorites = self.models['Quote'].get_all_favorites(user_id)
+		alias = session['alias']
+		return self.load_view('quotes.html', alias=alias, quotes=quotes, favorites=favorites)
 
 	def add_quote(self):
 		info = {
@@ -46,6 +49,7 @@ class Quotes(Controller):
 		'quote_id':quote_id,
 		'user_id':session['id']
 		}
+
 		favorites = self.models['Quote'].add_to_favorites(info)
 		return redirect('/quotes')
 
