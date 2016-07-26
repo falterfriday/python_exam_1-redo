@@ -55,11 +55,12 @@ class Quote(Model):
 		return self.db.query_db(query, data)
 
 	def add_to_favorites(self, info):
-		query = "INSERT INTO user_favorite_quote (user_id, quote_id) VALUES (:user_id, :quote_id)"
+		query = "INSERT INTO user_favorite_quote (user_id, quote_id) VALUES (:user_id, :quote_id) ON DUPLICATE KEY UPDATE quote_id = quote_id"
 		data = {
 		'user_id': info['user_id'],
 		'quote_id':info['quote_id']
 		}
+
 		return self.db.query_db(query, data)
 
 
